@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'books.apps.BooksConfig',
         #third
     'crispy_forms',
+    'crispy_bootstrap4',
     'crispy_bootstrap5',
 ]
 
@@ -124,6 +125,7 @@ USE_TZ = True
 
 # Directorio donde se almacenan los archivos estáticos
 STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
