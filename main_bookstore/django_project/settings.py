@@ -125,6 +125,24 @@ USE_TZ = True
 # Directorio donde se almacenan los archivos estáticos
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Ruta para plantillas
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],  # Ruta para plantillas globales
+        'APP_DIRS': True,  # Activa la búsqueda de plantillas en cada app
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
